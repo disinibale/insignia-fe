@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-sm text-[#1a1a1a];
+}
+
+.table_wrapper {
+  @apply block overflow-x-auto whitespace-nowrap;
+}
+
+td,
+th {
+  @apply border-b border-t border-slate-200 p-2 pr-8 text-left md:pr-16;
+}
+
+tr:hover {
+  @apply bg-gray-200;
+}
+
+th {
+  @apply bg-purple-600 font-medium text-white;
+}
+
+input {
+  @apply rounded-md border border-slate-300 px-2 py-1 outline-none placeholder:text-gray-400;
+}
+
+button {
+  @apply mx-2 rounded-md border bg-purple-500 p-2 hover:bg-purple-600 disabled:cursor-not-allowed disabled:bg-black disabled:bg-opacity-25;
+}
+
+.centeredItem {
+  @apply flex items-center justify-center;
+}
+
+/* =================== LOADER =================== */
+.miniLoader {
+  border: 8px solid #d9d7d7;
+  border-radius: 50%;
+  border-top: 8px solid #9333ea;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin-loader 1.25s linear infinite; /* Safari */
+  animation: spin-loader 1.25s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin-loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* =================== end of: LOADER =================== */
